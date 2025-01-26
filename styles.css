@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.game-container {
+    text-align: center;
+    width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+select, button {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background: #ff7eb3;
+    color: white;
+    cursor: pointer;
+}
+
+select {
+    background: #6a11cb;
+}
+
+button:hover {
+    background: #ff4d6d;
+}
+
+.game-info {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.hole {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #ffee93, #f08a5d);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hole .mole {
+    width: 80px;
+    height: 80px;
+    background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    bottom: -100px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hole.active .mole {
+    bottom: 20px;
+}
